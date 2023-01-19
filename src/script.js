@@ -16,15 +16,15 @@ class BootstrapCookieBanner {
 
     this.cookiePreferenceName = "__bscookie_preferences";
 
-    const isTrackingAllowed = settings?.isTrackingAllowed
-      ? settings?.isTrackingAllowed
+    const acceptedByDefault = settings?.acceptedByDefault
+      ? settings?.acceptedByDefault
       : false;
 
     // default cookie preferences
     this.cookiePreferences = {
-      analytics: isTrackingAllowed,
-      advertisement: isTrackingAllowed,
-      functionality: isTrackingAllowed,
+      analytics: acceptedByDefault,
+      advertisement: acceptedByDefault,
+      functionality: acceptedByDefault,
       necessary: true,
     };
 
@@ -73,6 +73,10 @@ class BootstrapCookieBanner {
     });
   }
 
+  /**
+   * Handles the advanced consent mode where
+   * the user has to specify their cookie preferences
+   */
   handleAdvancedConsentMode() {}
 
   /**
@@ -87,6 +91,9 @@ class BootstrapCookieBanner {
     this.showBanner = !cookiePreferences;
   }
 
+  /**
+   * Closes the banner
+   */
   closeBanner() {
     this.bootstrapCookieAlert.close();
   }
