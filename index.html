@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <title>Bootstrap Cookie Demo</title>
+</head>
+
+<body style="min-height: 100vh">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container justify-content-lg-between">
+                <a class="navbar-brand" href="#">Boostrap Cookie Demo 🍪</a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="justify-content-lg-center collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Layouts
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item active" aria-current="page" href="/">Simple banner</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/simple-preferences.html">With user preferences
+                                        controls</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/compact.html">Compact banner</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/compact=-preferences.html">Compact preferences</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Docs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">View on GitHub</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+                <a href="#" class="btn btn-primary d-none d-lg-block">Get Bootstrap Cookie</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-dark text-white">
+        <div class="container">
+            <div class="py-lg-5 mb-4">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">Bootstrap Cookie - demo</h1>
+                    <p class="col-md-8 fs-4">This page features the simple demo for the Bootstrap Cookie</p>
+                    <a href="#" class="btn btn-primary btn-lg">Get Bootstrap Cookie</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-4 py-lg-5">
+        <div class="container">
+            <h2 class="mb-4">Features</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-2">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Very lightweight</h3>
+                            <p class="card-text">All banner options rely on Bootstrap for styling and use an absolute
+                                miminum javascript</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Multiple styles</h3>
+                            <p class="card-text">There are multiple cookie banner styles available.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Fully customizable</h3>
+                            <p class="card-text">This banner works out of the box but is meant to be customized</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title h5">GTM-ready</h3>
+                            <p class="card-text">This cookie banner comes with a GTM integration. <a href="#">Learn
+                                    more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-4">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="display-5 fw-bold">Get yours today</h2>
+                <p class="col-md-8 mx-auto fs-4">Bootstrap Cookie is free to use!</p>
+                <a href="#" class="btn btn-primary btn-lg">Get Bootstrap Cookie</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bootstrap Cookie start -->
+    <div id="BootstrapCookieBanner" class="position-fixed bottom-0 w-100 container-fluid d-none">
+        <div class="col-lg-10 col-xl-8 mx-auto">
+            <div class="alert alert-light border d-md-flex align-items-center justify-content-between" role="alert">
+
+                <div class="mb-3 mb-md-0">
+                    🍪 This website uses cookies. To learn more, visit our <a href="#">Privacy Policy</a> page.
+                </div>
+
+                <button id="bootstrapCookieBanner--Accept" class="btn btn-primary" href="#"
+                    data-bscookie="accept">Accept</button>
+
+            </div>
+        </div>
+    </div>
+    <!-- ./ Bootstrap Cookie end -->
+
+    <script src="dist/bootstrap-cookie.js"></script>
+</body>
+
+</html>
