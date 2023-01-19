@@ -10,9 +10,9 @@ class BootstrapCookieBanner {
       this.target + " .alert"
     );
 
-    this.isSimpleConsentMode = settings?.isSimpleConsentMode
-      ? settings?.isSimpleConsentMode
-      : true;
+    console.log(
+      "consent mode is " + (this.isSimpleConsentMode ? "simple" : "advanced")
+    );
 
     this.cookiePreferenceName = "__bscookie_preferences";
 
@@ -99,4 +99,4 @@ class BootstrapCookieBanner {
   }
 }
 
-window.bootstrapCookieBanner = new BootstrapCookieBanner();
+window.BootstrapCookieBanner = BootstrapCookieBanner;

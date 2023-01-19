@@ -34,10 +34,11 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item active" aria-current="page" href="/">Simple banner</a>
+                                    <a class="dropdown-item" href="/">Simple banner</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="/demo/simple-preferences.html">With user preferences
+                                    <a class="dropdown-item active" aria-current="page"
+                                        href="/simple-preferences.html">With user preferences
                                         controls</a>
                                 </li>
                             </ul>
@@ -133,18 +134,52 @@
                     🍪 This website uses cookies. To learn more, visit our <a href="#">Privacy Policy</a> page.
                 </div>
 
-                <button id="bootstrapCookieBanner--Accept" class="btn btn-primary" href="#"
-                    data-bscookie="accept">Accept</button>
+                <div class="d-flex flex-column flex-lg-row gap-1">
+                    <button class="btn btn-link" href="#" data-bscookie="settings" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Cookie Settings</button>
+                    <button class="btn btn-primary" href="#" data-bscookie="accept">Accept</button>
+                    <button class="btn btn-secondary" href="#" data-bscookie="deny">Deny</button>
+                </div>
 
             </div>
         </div>
     </div>
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="necessaryCookies" checked disabled>
+                <label class="form-check-label" for="necessaryCookies">Necessary cookies</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="analytics" checked>
+                <label class="form-check-label" for="analytics">Analytics</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="advertisement" checked>
+                <label class="form-check-label" for="advertisement">Advertisement</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="functionality" checked>
+                <label class="form-check-label" for="functionality">Functionality</label>
+            </div>
+        </div>
+    </div>
+
     <!-- ./ Bootstrap Cookie end -->
 
-    <script src="/dist/bootstrap-cookie.js"></script>
+    <script src="../dist/bootstrap-cookie.js"></script>
 
     <script>
-        const bootstrapCookieBanner = new BootstrapCookieBanner();
+        const bootstrapCookieBanner = new BootstrapCookieBanner({
+            acceptedByDefault: false,
+            isSimpleConsentMode: false
+        });
     </script>
 </body>
 
